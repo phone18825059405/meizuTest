@@ -1,0 +1,152 @@
+@import "./reset.scss";
+
+body{
+	font-family: 'Source Han Sans','Hiragino Sans GB',STXihei,"Microsoft YaHei",SimSun,Heiti,sans-serif;
+	background-color: #f0f0f0;
+}
+.header-wrapper{
+	position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    .headerbar{
+    	height: 1.6rem;
+	    position: relative;
+	    z-index: 998;
+	    .header-left{
+			float: left;
+		    height: 1.6rem;
+		    width: 2.666667rem;
+		    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNy4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxvZ28iIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4Ig0KCSB3aWR0aD0iNDc3cHgiIGhlaWdodD0iOTdweCIgdmlld0JveD0iMCAwIDQ3NyA5NyIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgNDc3IDk3IiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxnPg0KCTxyZWN0IHg9IjI0Ni4xNDkiIHk9IjQuMTk3IiBmaWxsPSIjMEJCQkVGIiB3aWR0aD0iMTcuNDYyIiBoZWlnaHQ9Ijg1LjAzOSIvPg0KCTxwYXRoIGZpbGw9IiMwQkJCRUYiIGQ9Ik0xMDkuODY1LDQuMTk3SDE3LjIxMmMtNy44MjgsMC0xNC4xNzMsNi4zNDUtMTQuMTczLDE0LjE3M3Y3MC44NjZoMTYuNjU1VjIzLjcxMw0KCQljMC0zLjEzLDIuNTM5LTUuNjY5LDUuNjctNS42NjlINTUuMjF2NzEuMTkyaDE2LjY1NlYxOC4wNDRoMjkuODQ2YzMuMTMxLDAsNS42NywyLjUzOSw1LjY3LDUuNjY5djY1LjUyM2gxNi42NTZWMTguMzcNCgkJQzEyNC4wMzgsMTAuNTQyLDExNy42OTMsNC4xOTcsMTA5Ljg2NSw0LjE5N3oiLz4NCgk8cGF0aCBmaWxsPSIjMEJCQkVGIiBkPSJNMTQxLjc1MywxOC4zN3Y1Ni42OTNjMCw3LjgyNyw2LjM0NSwxNC4xNzMsMTQuMTczLDE0LjE3M2g3Mi4yNjNWNzUuMzg5aC02NC4xMQ0KCQljLTMuMTMyLDAtNS42Ny0yLjUzOC01LjY3LTUuNjdWNTMuNjQ3aDY2LjI5MlYzOS43ODZoLTY2LjI5MlYyMy43MTNjMC0zLjEzLDIuNTM4LTUuNjY5LDUuNjctNS42NjloNjQuMTFWNC4xOThsLTcyLjI2My0wLjAwMQ0KCQlDMTQ4LjA5OCw0LjE5NywxNDEuNzUzLDEwLjU0MiwxNDEuNzUzLDE4LjM3eiIvPg0KCTxwYXRoIGZpbGw9IiMwQkJCRUYiIGQ9Ik0zNTYuNjM4LDQuMTk4aC03NC41Nzl2MTMuODQ2aDYxLjcyNGwtNTkuMjAxLDUyLjU4NWMtOS40OTcsOC4xMi0zLjMxOCwxOC42MDgsNC41NjcsMTguNjA4aDc1LjQyNlY3NS4zOQ0KCQlIMzAxLjY0bDU5LjI5NS01Mi41ODVDMzcwLjUwMSwxNC4xOTksMzY0Ljc0Niw0LjE5OCwzNTYuNjM4LDQuMTk4eiIvPg0KCTxwYXRoIGZpbGw9IiMwQkJCRUYiIGQ9Ik00NTYuMDM3LDQuMTk3djY1LjUyMmMwLDMuMTMxLTIuNTM4LDUuNjY5LTUuNjY5LDUuNjY5djAuMDAxaC00Ny41Nzl2LTAuMDAxDQoJCWMtMy4xMzIsMC01LjY3LTIuNTM4LTUuNjctNS42NjlWNC4xOTdoLTE2LjYwOHY3MC44NjZjMCw3LjgyNyw2LjM0NiwxNC4xNzMsMTQuMTczLDE0LjE3M2g2My44MzcNCgkJYzcuODI3LDAsMTQuMTczLTYuMzQ2LDE0LjE3My0xNC4xNzNWNC4xOTdINDU2LjAzN3oiLz4NCjwvZz4NCjwvc3ZnPg0K) 0.266667rem center no-repeat;
+		    background-size: 2.133333rem 0.8rem;
+	        text-decoration: none;
+    		cursor: auto;
+	    }
+	    .header-right{
+		    float: right;
+		    width: 1.6rem;
+		    height: 1.6rem;
+		    text-align: center;
+		    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+Cjxzdmcgd2lkdGg9Ijc4cHgiIGhlaWdodD0iNThweCIgdmlld0JveD0iMCAwIDc4IDU4IiB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHhtbG5zOnNrZXRjaD0iaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoL25zIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBTa2V0Y2ggMy4xLjEgKDg3NjEpIC0gaHR0cDovL3d3dy5ib2hlbWlhbmNvZGluZy5jb20vc2tldGNoIC0tPgogICAgPHRpdGxlPlNsaWNlIDI8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIFNrZXRjaC48L2Rlc2M+CiAgICA8ZGVmcz48L2RlZnM+CiAgICA8ZyBpZD0iUGFnZS0xIiBzdHJva2U9Im5vbmUiIHN0cm9rZS13aWR0aD0iMSIgZmlsbD0ibm9uZSIgZmlsbC1ydWxlPSJldmVub2RkIiBza2V0Y2g6dHlwZT0iTVNQYWdlIj4KICAgICAgICA8ZyBpZD0ibGlzdCIgc2tldGNoOnR5cGU9Ik1TTGF5ZXJHcm91cCIgZmlsbD0iI0JDQkNCQyI+CiAgICAgICAgICAgIDxnIGlkPSJHcm91cCIgc2tldGNoOnR5cGU9Ik1TU2hhcGVHcm91cCI+CiAgICAgICAgICAgICAgICA8cmVjdCBpZD0iUmVjdGFuZ2xlLXBhdGgiIHg9IjAiIHk9IjAiIHdpZHRoPSI3Ny43NzUiIGhlaWdodD0iOC42NDIiPjwvcmVjdD4KICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtcGF0aCIgeD0iMCIgeT0iMjQiIHdpZHRoPSI3Ny43NzUiIGhlaWdodD0iOC42NDIiPjwvcmVjdD4KICAgICAgICAgICAgICAgIDxyZWN0IGlkPSJSZWN0YW5nbGUtcGF0aCIgeD0iMCIgeT0iNDkiIHdpZHRoPSI3Ny43NzUiIGhlaWdodD0iOC42NDIiPjwvcmVjdD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+) center no-repeat;
+		    background-size: 0.666667rem;
+	    }
+    }
+}
+
+.section img {
+    display: block;
+    width: 100%;
+}
+.section .section-title {
+    font-size: 0.48rem;
+    padding: 0.266667rem 0;
+    line-height: 1.6;
+    color: #787878;
+    padding-left: 0.426667rem;
+    font-weight: 400;
+}
+.banner-wrapper{
+    background-color: #fff;
+    border-bottom: 1px solid #ececec;
+    margin-top: 0;
+	.swiper-container{
+	    width: 100%;
+	    margin: 0 auto;
+	    position: relative;
+	    overflow: hidden;
+	    z-index: 1;
+		.swiper-wrapper{
+		    position: relative;
+		    width: 100%;
+		    height: 100%;
+		    z-index: 1;
+		    display: -webkit-box;
+		    display: -webkit-flex;
+		    display: flex;
+		    -webkit-transform-style: preserve-3d;
+		    transform-style: preserve-3d;
+
+		    -webkit-transition-property: -webkit-transform;
+		    transition-property: transform;
+
+		    -webkit-box-sizing: content-box;
+		    box-sizing: content-box;
+		    .swiper-slider{
+	    	    -webkit-transform-style: preserve-3d;
+			    transform-style: preserve-3d;
+			    -webkit-flex-shrink: 0;
+			    flex-shrink: 0;
+			    width: 100%;
+			    height: 100%;
+			    position: relative;
+		    }
+		}
+	}
+}
+.product{
+	a{
+	    display: block;
+    	border-top: 1px solid #f0f0f0;
+	}
+}
+
+.meilan{
+	.buy-link {
+	    display: block;
+	    border-bottom: 1px solid #f0f0f0;
+	}
+}
+
+.accessory {
+	.accessory-list {
+	    width: 100%;
+	    overflow: hidden;
+	    background-color: #fff;
+	    li{
+    	    box-sizing: border-box;
+			position: relative;
+			float: left;
+			width: 50%;
+			overflow: hidden;
+			text-align: center;
+			padding-top: 0.533333rem;
+			padding-bottom: 0.533333rem;
+			&:before{
+			    position: absolute;
+				content: '';
+				right: 0;
+				top: 0;
+				height: 100%;
+				width: 1px;
+				background-color: #f0f0f0;
+			}
+			&:after{
+			    position: absolute;
+			    content: '';
+			    left: 0;
+			    bottom: 0;
+			    height: 1px;
+			    width: 100%;
+			    background-color: #f0f0f0;
+			}
+			a{
+			    display: block;
+			    color: #333;
+			    margin-bottom: 0.266667rem;
+			    img{
+			    	width: 58%;
+    				margin: 0 auto 0.266667rem;
+			    }
+			    span{
+		    	    display: block;
+   					 vertical-align: top;
+			    }
+			    .item-price{
+		    	    margin-top: 0.266667rem;
+    				color: #21c1f1;
+			    }
+			}
+	    }
+	}
+}

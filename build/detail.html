@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"> 
+    <!--允许全屏--> 
+    <meta content="yes" name="apple-mobile-web-app-capable"> 
+    <meta content="yes" name="apple-touch-fullscreen"> 
+    <meta content="telephone=no,email=no" name="format-detection"> 
+    <script src="../static/js/flexible.js"></script>
+    <script src="../static/js/zepto.min.js"></script>
+    <script src="../static/js/hammer.min.js"></script>
+    <title>Hello World app</title>
+    <link rel="stylesheet" href="../app/css/detail.css">
+  </head>
+  <body>
+    <div class="app">
+      <header id="header" class="header orient-h">
+          <a class="header-back">
+              <i class="icon icon-back"></i>
+          </a>
+          <nav class="header-nav">
+              <a class="active" href="javascript:" data-mtype="mall_de_top_good_click">商品</a>
+              <a href="javascript:" data-mtype="mall_de_top_detail_click">详情</a>
+              <a href="javascript:" data-mtype="mall_de_top_parameter_click">参数</a>
+          </nav>
+      </header>
+      <main>
+        <div class="main-inner">
+          <div class="goods" id="goods" style="transition:transform 1s cubic-bezier(0, 0, 0.25, 1) 0ms;background:#fff">
+            <div class="swipe">
+              <ul class="swipe-wrap clearfix">
+                <!--<li class="item"><img src="http://open.file.meizu.com/group1/M00/00/A0/Cix_s1gaoE2ARDhnAA5n-xkFzVA230.png@480x480.jpg"></li>-->
+              </ul>
+              <div class="point">
+              </div>
+            </div>
+            <div class="prod">
+              <div class="sanp-up count-down"><em id="J_panicBuyingCountDown">11月25日 10:00 准时开售</em></div>
+              <section class="prod-info">
+                <div class="prod-info-header"><h2 class="vm-title">PRO 6S</h2></div>
+                <div class="prod-info-price"><small>¥</small><span class="vm-money">2699.00</span></div>
+                <div class="prod-info-message"><p>11月25日，限量开售</p></div>
+              </section>
+              <section class="prod-service">
+                <ul>
+                  <li><i class="icon icon-service"></i>顺丰包邮</li>
+                  <li><i class="icon icon-service"></i>7天无理由退货</li>
+                </ul>
+                <i class="icon icon-enter"></i>
+              </section>
+              <section class="prod-selected">
+                <label>已选</label>
+                <p>
+                    <span class="vm-props s-selected" id="J_selectedProps">全网通公开版,香槟金,64GB</span>
+                    <span class="vm-quantity" id="J_selectedQuantity" style="transform-origin: 0px 0px 0px; opacity: 1; transform: scale(1, 1);">×1</span>
+                </p>
+                <i class="icon icon-enter"></i>
+              </section>
+              <section class="prod-suda"><span class="vm-mark">服务</span><p class="mod-bd">本商品由<em>魅族</em>负责发货并提供售后服务</p></section>
+              <div class="load-more" id="J_loadMore">继续拖动，查看详情</div>
+            </div>
+            <div class="info-more"></div>
+          </div>
+          <!--介绍-->
+          <div class="description" id="description">
+              <div class="container">
+                  <article class="desc-pictures">
+                    <img src="http://open.file.meizu.com/group1/M00/00/A2/Cix_s1gb8GiAWYQ-AAj2-2HDRDY267.jpg" "="">
+                    <img src="http://open.file.meizu.com/group1/M00/00/A1/CnQOjVgbBP-AKuFpAAQC7G1SP0c061.jpg" "="">
+                    <img src="http://open.file.meizu.com/group1/M00/00/A1/CnQOjVgbBQCAIH5OAATx0Tru6nE574.jpg" "="">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/Cix_s1gbBQCAPHkWAAYMBFRzAQU160.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/Cix_s1gbBQCAWGRWAAgrtFhJlBA023.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/CnQOjVgbBQCABmcxAAN_hohIGwc195.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/CnQOjVgbBQGAZyn5AAYHZV9NRGw538.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/Cix_s1gbBQGASNouAAQ1kL6JgMY983.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/CnQOjVgbBQGAPoVwAANNBDzd0o0035.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/CnQOjVgbBQKAcI9WAAgo1ffFJmM091.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/Cix_s1gbBQKAf3o3AAPcsIs379E805.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/Cix_s1gbBQKACG8tAAMIt5r6M68851.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/CnQOjVgbBQKAEQA8AAWsFft8OZE304.jpg">
+                    <img class="" src="http://open.file.meizu.com/group1/M00/00/A1/Cix_s1gbBQOAaRWCAAIO-Oi1jl4580.jpg">
+                  </article>
+              </div>
+              <div class="load-more">
+                  左右滑动，查看其他信息
+              </div>
+          </div>
+          <!--参数-->
+          <div class="standard" id="standard">
+              <div class="container">
+                  <table>
+                      <tbody>
+                          <tr>
+                              <th>品牌</th>
+                              <td>魅族</td>
+                          </tr>
+                          <tr>
+                              <th>型号</th>
+                              <td>PRO 6s</td>
+                          </tr>
+                          <tr>
+                              <th>尺寸</th>
+                              <td>147.7*70.8*7.3mm</td>
+                          </tr>
+                          <tr>
+                              <th>电池容量</th>
+                              <td>3060mAh</td>
+                          </tr>
+                          <tr>
+                              <th>重量</th>
+                              <td>163g</td>
+                          </tr>
+                          <tr>
+                              <th>屏幕尺寸</th>
+                              <td>5.2英寸</td>
+                          </tr>
+                          <tr>
+                              <th>对比度</th>
+                              <td>10000：1</td>
+                          </tr>
+                          <tr>
+                              <th>分辨率</th>
+                              <td>1920×1080</td>
+                          </tr>
+                          <tr>
+                              <th>PPI</th>
+                              <td>423.6</td>
+                          </tr>
+                          <tr>
+                              <th>亮度</th>
+                              <td>350cd/m²（典型值）</td>
+                          </tr>
+                          <tr>
+                              <th>显示技术</th>
+                              <td> Super AMOLED</td>
+                          </tr>
+                          <tr>
+                              <th>制造工艺</th>
+                              <td>On-cell</td>
+                          </tr>
+                          <tr>
+                              <th>运行内存（RAM）</th>
+                              <td>4GB</td>
+                          </tr>
+                          <tr>
+                              <th>机身内存</th>
+                              <td>64GB</td>
+                          </tr>
+                          <tr>
+                              <th>CPU</th>
+                              <td>Helio X25 处理器</td>
+                          </tr>
+                          <tr>
+                              <th>GPU</th>
+                              <td>ARM Mali-T880 图形处理器</td>
+                          </tr>
+                          <tr>
+                              <th>CPU频率</th>
+                              <td>ARM®&nbsp;Cortex®-A53™ 1.4GHz x4 +<br>ARM® Cortex®-A53™ 2.0GHz x4 +<br>ARM® Cortex®-A72™ 2.5GHz x2</td>
+                          </tr>
+                          <tr>
+                              <th>前置摄像头</th>
+                              <td>500万像素<br>ƒ/2.0 光圈<br>5 片式镜头<br>Face AE 面部曝光增强<br>智能美颜算法 自适应美肤</td>
+                          </tr>
+                          <tr>
+                              <th>后置摄像头</th>
+                              <td>1200万像素<br>连拍模式<br>全景模式<br>四轴光学防抖 出片清晰稳定<br>6片式镜头 好画质 强解析<br>PDAF 相位对焦 急速抓拍<br>激光辅助对焦  暗广拍照更准确<br>环形双色温闪光灯  补光自然均匀<br>ƒ/2.0 光圈   大光圈 大虚化</td>
+                          </tr>
+                          <tr>
+                              <th>响应速度</th>
+                              <td>0.2s</td>
+                          </tr>
+                          <tr>
+                              <th>识别角度</th>
+                              <td>360°</td>
+                          </tr>
+                          <tr>
+                              <th>指纹组数</th>
+                              <td>5组</td>
+                          </tr>
+                          <tr>
+                              <th>mTouch版本</th>
+                              <td>2.1</td>
+                          </tr>
+                          <tr>
+                              <th>mTouch传感器</th>
+                              <td>电容式触摸传感器</td>
+                          </tr>
+                          <tr>
+                              <th>全网通</th>
+                              <td>全网通（公开版）<br>移动 4G TD-LTE<br>联通/电信 4G TD/FDD-LTE<br>移动 3G TD-SCDMA<br>联通 3G WCDMA<br>电信 3G EVDO<br>移动/联通 2G GSM<br>电信 2G CDMA</td>
+                          </tr>
+                          <tr>
+                              <th>WLAN功能</th>
+                              <td>802.11a/b/g/n/ac 无线网络<br>支持 5GHz 和 2.4GHz 频段</td>
+                          </tr>
+                          <tr>
+                              <th>蓝牙</th>
+                              <td>Bluetooth 4.1<br>支持 BLE</td>
+                          </tr>
+                          <tr>
+                              <th>Hi-Fi</th>
+                              <td>Cirrus Logic CS43L36 芯片</td>
+                          </tr>
+                          <tr>
+                              <th>视频</th>
+                              <td>支持 MP4、3GP、MOV、MKV、AVI、FLV、MPEG 视频格式</td>
+                          </tr>
+                          <tr>
+                              <th>音频</th>
+                              <td>支持 FLAC、APE、AAC、MKA、OGG、MIDI、M4A、AMR 音频格式</td>
+                          </tr>
+                          <tr>
+                              <th>图片</th>
+                              <td>支持 JPEG、PNG、GIF、BMP 图片格式</td>
+                          </tr>
+                          <tr>
+                              <th>系统版本</th>
+                              <td>Flyme 5</td>
+                          </tr>
+                          <tr>
+                              <th>传感器</th>
+                              <td>霍尔磁感应<br>重力感应<br>红外距离感应<br>陀螺仪<br>环境光度感应<br>触摸感应<br>电子罗盘</td>
+                          </tr>
+                          <tr>
+                              <th>导航定位</th>
+                              <td>GPS<br>A-GPS<br>GLONASS<br>电子罗盘</td>
+                          </tr>
+                          <tr>
+                              <th>操作环境</th>
+                              <td>工作环境温度&nbsp;-15 至 55°C<br>非工作温度&nbsp;-40 至 70°C<br>相对湿度&nbsp;95%<br>工作高度&nbsp;高达 5000 米</td>
+                          </tr>
+                          <tr>
+                              <th>包装清单</th>
+                              <td>主机 x 1<br>电源适配器 x 1<br>保修证书 x 1<br>SIM卡顶针 x 1<br>数据线 x 1</td>
+                          </tr>
+                      </tbody>
+                  </table>
+              </div>
+              <div class="load-more">
+                  左右滑动，查看其他信息
+              </div>
+          </div>
+        </div>
+      </main>
+      <footer class="fixed-btm">
+        <div class="mod-total">
+            总计:
+            <small>¥ </small><span class="vm-money">2699.00</span>
+        </div>
+        <button class="btn notlogin" id="J_btnBuyNow" type="button" data-action="http://ordercenter.mall.meizu.com/order/mall/buy.html" data-mtype="mall_de_buy1_10557_2487">请先登录</button>
+      </footer>
+      <!--弹出层-->
+      <section class="layer layer-props open" id="J_layerProps" style="transform-origin: 0px 0px 0px; opacity: 1;visibility: hidden;">
+        <div class="layer-cover">
+        </div>
+        <div class="layer-inner">
+            <div id="property" class="property">
+                <div class="property-inner" id="J_propertyInner" style="transition-timing-function: cubic-bezier(0.1, 0.57, 0.1, 1); transition-duration: 0ms; transform: translate(0px, 0px) translateZ(0px);">
+                        <dl data-property="网络类型" class="property-sale">
+                            <dt class="vm-metatit">网络类型</dt>
+                            <dd class="clearfix">
+                                    <a data-value="14:18238" class="prop" data-mtype="mall_de_pa_1_1">全网通公开版</a>
+                                    <a data-value="14:18411" class="prop" data-mtype="mall_de_pa_1_2">移动定制版</a>
+                            </dd>
+                        </dl>
+                        <dl data-property="颜色分类" class="property-sale">
+                            <dt class="vm-metatit">颜色分类</dt>
+                            <dd class="clearfix">
+                                    <a data-value="3:16" class="prop" data-mtype="mall_de_pa_2_1">金色</a>
+                                    <a data-value="3:18" class="prop" data-mtype="mall_de_pa_2_2">灰色</a>
+                                    <a data-value="3:1152" class="prop" data-mtype="mall_de_pa_2_3">银色</a>
+                            </dd>
+                        </dl>
+                        <dl data-property="内存容量" class="property-sale">
+                            <dt class="vm-metatit">内存容量</dt>
+                            <dd class="clearfix">
+                                    <a data-value="13:36" class="prop" data-mtype="mall_de_pa_3_1">16GB</a>
+                                    <a data-value="13:37" class="prop" data-mtype="mall_de_pa_3_2">32GB</a>
+                            </dd>
+                        </dl>
+                        <dl class="property-package">
+                            <dt class="vm-metatit">套餐</dt>
+                            <dd class="clearfix" id="J_packageLists"><a data-value="0" class="prop" data-mtype="mall_de_pa_set_1">官方标配</a><a data-value="101" class="prop" data-mtype="mall_de_pa_set_2">高透膜套餐</a></dd>
+                        </dl>
+
+                    <div class="property-quantity">
+                        <div class="vm-metatit">数量</div>
+                        <div class="property-quantity-control">
+                            <a title="减少" href="javascript:;" class="vm-minus disabled">-</a>
+                            <span type="text" class="vm-quantity" id="J_quantity" data-value="1" data-max="1">1</span>
+                            <a title="增加" href="javascript:;" class="vm-plus disabled">+</a>
+                        </div>
+                        <span id="J_Stock" class="vm-count">（限购 1 件）</span>
+                    </div>
+                </div>
+            </div>
+            <div class="summary">
+                <div class="summary-pic">
+                    <img id="J_summaryPicBooth" src="http://storeimg.meizu.com/product/1465869618-81236.png@240x240.jpg"  alt="" names="魅蓝3s 全网通公开版 银色 16GB">
+                </div>
+                <div class="summary-info">
+                    <div class="vm-price">
+                        <span class="price">¥ <em id="J_summaryPrice">699.00</em></span>
+                        <span class="countdown" id="J_summaryDiscountCountDown">
+                    </span>
+                    </div>
+                    <div class="vm-title" id="J_summaryName">全网通公开版 银色 16GB</div>
+                    <div class="vm-discount" id="J_summaryDiscount"></div>
+                    <a class="vm-close J_btnClose" data-ctrl="J_layerProps" data-mtype="mall_de_pa_close"><i class="icon icon-close"></i></a>
+                </div>
+            </div>
+
+            <div class="layer-footer footer-summary">
+                <a class="btn btn-danger disabled" id="J_btnBuyPropsEnter" data-mtype="mall_de_buy2">即将发售</a>
+            </div>
+        </div>
+    </section>
+    <section id="imgFullView" style="display:none;width:100%;height: 100%;overflow: hidden;position: fixed;left: 0;right: 0;top: 0;bottom: 0;background:rgba(0,0,0,.8);z-index: 9999;">
+      
+    </section>
+    </div>
+  </body>
+  <script type="text/javascript">
+   var MZ = {
+  "environment": {
+    "checkL": true
+  },
+  "modelData": {
+    "itemId": 10248,
+    "type": 1,
+    "recommend": "14:18238;3:1152;13:36",
+    "activeStatus": 1,
+    "shelveTime": null,
+    "supportFastArrival": false,
+    "cspuMap": {
+      "14:18411;3:18;13:36": {
+        "cspuId": 1009,
+        "skuId": 1950,
+        "price": 699.00,
+        "originPrice": 699.00,
+        "names": "魅蓝3s 移动定制版 灰色 16GB",
+        "itemName": "魅蓝3s",
+        "attributes": "移动定制版 灰色 16GB",
+        "images": ["http://open.file.meizu.com/group1/M00/00/66/CnQOjVfh7HmATjMcAA4jl_NVN7Q266.png", "http://open.file.meizu.com/group1/M00/00/66/CnQOjVfh7IGAN700AAlfNt0r-qc075.png", "http://open.file.meizu.com/group1/M00/00/66/CnQOjVfh7HyAUwZCAANjnVRLZ50381.png", "http://storeimg.meizu.com/product/1465785856-67178.png"],
+        "stock": 1,
+        "packageIds": [0],
+        "buyButton": "售罄",
+        "priceCent": 69900
+      },
+      "14:18238;3:1152;13:37": {
+        "cspuId": 1018,
+        "skuId": 1793,
+        "price": 899.00,
+        "originPrice": 899.00,
+        "names": "魅蓝3s 全网通公开版 银色 32GB",
+        "itemName": "魅蓝3s",
+        "attributes": "全网通公开版 银色 32GB",
+        "images": ["http://storeimg.meizu.com/product/1465869618-81236.png", "http://storeimg.meizu.com/product/1465786605-96868.png", "http://storeimg.meizu.com/product/1465786623-75620.png", "http://storeimg.meizu.com/product/1465786643-76421.png"],
+        "stock": 1,
+        "packageIds": [0],
+        "buyButton": "售罄",
+        "priceCent": 89900
+      },
+      "14:18238;3:1152;13:36": {
+        "cspuId": 1006,
+        "skuId": 1791,
+        "price": 699.00,
+        "originPrice": 699.00,
+        "names": "魅蓝3s 全网通公开版 银色 16GB",
+        "itemName": "魅蓝3s",
+        "attributes": "全网通公开版 银色 16GB",
+        "images": ["http://storeimg.meizu.com/product/1465869618-81236.png", "http://storeimg.meizu.com/product/1465786605-96868.png", "http://storeimg.meizu.com/product/1465786623-75620.png", "http://storeimg.meizu.com/product/1465786643-76421.png"],
+        "stock": 1,
+        "packageIds": [0, 101],
+        "buyButton": "售罄",
+        "priceCent": 69900
+      },
+      "14:18238;3:19;13:36": {
+        "cspuId": 1003,
+        "skuId": 1946,
+        "price": 699.00,
+        "originPrice": 699.00,
+        "names": "魅蓝3s 全网通公开版 玫瑰金 16GB",
+        "itemName": "魅蓝3s",
+        "attributes": "全网通公开版 玫瑰金 16GB",
+        "images": ["http://storeimg.meizu.com/product/1465869680-71692.png", "http://storeimg.meizu.com/product/1465787364-54384.png", "http://storeimg.meizu.com/product/1465787411-40738.png", "http://storeimg.meizu.com/product/1465787431-48687.png"],
+        "stock": 0,
+        "packageIds": [0],
+        "buyButton": "售罄",
+        "priceCent": 69900
+      },
+      "14:18238;3:16;13:37": {
+        "cspuId": 1016,
+        "skuId": 1788,
+        "price": 899.00,
+        "originPrice": 899.00,
+        "names": "魅蓝3s 全网通公开版 金色 32GB",
+        "itemName": "魅蓝3s",
+        "attributes": "全网通公开版 金色 32GB",
+        "images": ["http://storeimg.meizu.com/product/1465869581-48452.png", "http://storeimg.meizu.com/product/1465786099-28622.png", "http://storeimg.meizu.com/product/1465786139-98656.png", "http://storeimg.meizu.com/product/1465786162-77770.png"],
+        "stock": 1,
+        "packageIds": [0],
+        "buyButton": "售罄",
+        "priceCent": 89900
+      },
+      "14:18238;3:16;13:36": {
+        "cspuId": 1004,
+        "skuId": 2141,
+        "price": 699.00,
+        "originPrice": 699.00,
+        "names": "魅蓝3s 全网通公开版 金色 16GB",
+        "itemName": "魅蓝3s",
+        "attributes": "全网通公开版 金色 16GB",
+        "images": ["http://storeimg.meizu.com/product/1465869581-48452.png", "http://storeimg.meizu.com/product/1465786099-28622.png", "http://storeimg.meizu.com/product/1465786139-98656.png", "http://storeimg.meizu.com/product/1465786162-77770.png"],
+        "stock": 0,
+        "packageIds": [101],
+        "buyButton": null,
+        "priceCent": 69900
+      },
+      "14:18238;3:18;13:37": {
+        "cspuId": 1017,
+        "skuId": 1790,
+        "price": 899.00,
+        "originPrice": 899.00,
+        "names": "魅蓝3s 全网通公开版 灰色 32GB",
+        "itemName": "魅蓝3s",
+        "attributes": "全网通公开版 灰色 32GB",
+        "images": ["http://storeimg.meizu.com/product/1465869526-88429.png", "http://storeimg.meizu.com/product/1465785838-83977.png", "http://storeimg.meizu.com/product/1465785814-93639.png", "http://storeimg.meizu.com/product/1465785856-67178.png"],
+        "stock": 1,
+        "packageIds": [0],
+        "buyButton": "售罄",
+        "priceCent": 89900
+      },
+      "14:18238;3:18;13:36": {
+        "cspuId": 1005,
+        "skuId": 1789,
+        "price": 699.00,
+        "originPrice": 699.00,
+        "names": "魅蓝3s 全网通公开版 灰色 16GB",
+        "itemName": "魅蓝3s",
+        "attributes": "全网通公开版 灰色 16GB",
+        "images": ["http://storeimg.meizu.com/product/1465869526-88429.png", "http://storeimg.meizu.com/product/1465785838-83977.png", "http://storeimg.meizu.com/product/1465785814-93639.png", "http://storeimg.meizu.com/product/1465785856-67178.png"],
+        "stock": 1,
+        "packageIds": [0],
+        "buyButton": "售罄",
+        "priceCent": 69900
+      },
+      "14:18411;3:1152;13:36": {
+        "cspuId": 1010,
+        "skuId": 1951,
+        "price": 699.00,
+        "originPrice": 699.00,
+        "names": "魅蓝3s 移动定制版 银色 16GB",
+        "itemName": "魅蓝3s",
+        "attributes": "移动定制版 银色 16GB",
+        "images": ["http://open.file.meizu.com/group1/M00/00/66/CnQOjVfh7H2ADie-AA4xFeSFyAk190.png", "http://open.file.meizu.com/group1/M00/00/66/CnQOjVfh7ISALm6AAAl6Wat8b9s793.png", "http://storeimg.meizu.com/product/1465786623-75620.png", "http://storeimg.meizu.com/product/1465786643-76421.png"],
+        "stock": 1,
+        "packageIds": [0],
+        "buyButton": "售罄",
+        "priceCent": 69900
+      }
+    },
+    "packageMap": {
+      "0": {
+        "id": null,
+        "name": "官方标配",
+        "profits": 0,
+        "items": null,
+        "price": 0,
+        "available": true
+      },
+      "101": {
+        "id": 101,
+        "name": "高透膜套餐",
+        "profits": 9.00,
+        "items": ["101&10250"],
+        "price": 20.00,
+        "available": true
+      }
+    },
+    "packageStockMap": {
+      /*"14:18238;3:16;13:36+101": {
+        "skuId": 2141,
+        "stock": 0,
+        "buyButton": "售罄"
+      },*/
+      "14:18238;3:1152;13:36+101": {
+        "skuId": 2144,
+        "stock": 1,
+        "buyButton": "售罄"
+      },
+      "14:18238;3:18;13:36+0": {
+        "skuId": 1789,
+        "stock": 1,
+        "buyButton": "售罄"
+      },
+      "14:18238;3:1152;13:37+0": {
+        "skuId": 1793,
+        "stock": 1,
+        "buyButton": "售罄"
+      },
+      "14:18411;3:1152;13:36+0": {
+        "skuId": 1951,
+        "stock": 1,
+        "buyButton": "售罄"
+      },
+      "14:18238;3:16;13:37+0": {
+        "skuId": 1788,
+        "stock": 1,
+        "buyButton": "售罄"
+      },
+      "14:18238;3:1152;13:36+0": {
+        "skuId": 1791,
+        "stock": 1,
+        "buyButton": "售罄"
+      },
+      "14:18238;3:18;13:37+0": {
+        "skuId": 1790,
+        "stock": 1,
+        "buyButton": "售罄"
+      },
+      "14:18411;3:18;13:36+0": {
+        "skuId": 1950,
+        "stock": 1,
+        "buyButton": "售罄"
+      },/*
+      "14:18238;3:19;13:36+0": {
+        "skuId": 1946,
+        "stock": 0,
+        "buyButton": "售罄"
+      }*/
+    },
+    "packageItems": {
+      "101&10250": {
+        "imgUrl": "http://storeimg.meizu.com/product/1465894373-38674.png",
+        "name": "魅蓝3s 高透保护膜（套餐版）",
+        "recommend": "3:1572",
+        "saleAttrs": {
+          "3": [{
+            "id": 1572,
+            "name": "透明",
+            "imageColor": "http://storeimg.meizu.com/product/1450922313-97036.png",
+            "cspuImageColor": "http://storeimg.meizu.com/product/1465894373-38674.png",
+            "order": null
+          }]
+        },
+        "cells": {
+          "3:1572": {
+            "skuId": 1133,
+            "price": 20.00,
+            "priceCent": 2000,
+            "originPriceCent": 2900,
+            "profits": 9.00,
+            "stock": 308,
+            "images": "http://storeimg.meizu.com/product/1465894373-38674.png",
+            "names": "透明"
+          }
+        }
+      }
+    },
+    "skuMap": {
+      "2144": "14:18238;3:1152;13:36+101",
+      "2141": "14:18238;3:16;13:36+101",
+      "1950": "14:18411;3:18;13:36+0",
+      "1951": "14:18411;3:1152;13:36+0",
+      "1790": "14:18238;3:18;13:37+0",
+      "1946": "14:18238;3:19;13:36+0",
+      "1791": "14:18238;3:1152;13:36+0",
+      "1788": "14:18238;3:16;13:37+0",
+      "1793": "14:18238;3:1152;13:37+0",
+      "1789": "14:18238;3:18;13:36+0"
+    },
+    "discount": null
+  }
+}
+    
+    var mainWrapper = $('.main-inner').eq(0);
+    var swipe = $('.swipe').eq(0);
+    var ul = $('.swipe-wrap',swipe);
+    var li = $('.item',ul);
+    var point = $('.point',swipe);
+    var btn = $('#property a').not(function(){return this.parentNode.className=='property-quantity-control'});
+    var btn_selected = $('#property a.selected');
+    var summary_pic = $('.summary-pic img')[0];
+    var title = $('.summary-info .vm-title');
+    var price = $('.summary-info #J_summaryPrice');
+    var options_wrap = $('.property-inner');
+    var options_item = $('.property-sale',options_wrap);
+    var iWidth = window.innerWidth;
+
+    var search = MZ['modelData']['cspuMap'];
+
+
+    function imgFullViewFun(element){
+      var that = this;
+
+      //that.curentDistance = 0;
+      that.currentScale = 0;
+      that.loopIndex = 0;
+      that.curX= 0;
+      that.curY= 0;
+      that.temp = 1;
+      that.scaleActive = false;
+
+      /*var transformFun = function(target,tranX,tranY,scale){
+        target.style.webkitTransform  = 'translate3d('+(tranX+e.deltaX)+'px,'+(curY+e.deltaY)+'px,0) scale3d('+scale+','+scale+','+scale+')';
+      }*/
+      var transformFun  = function(_index){
+         element.style.webkitTransform  = 'translateX('+ (_index*iWidth)+'px)';
+      }
+
+      var mc = new Hammer(element);
+      mc.add(new Hammer.Pinch());
+
+      mc.on("pan", function(ev) {
+          element.style.webkitTransition = ''; 
+          if(that.scaleActive == false){
+              if(that.loopIndex==0&&ev.deltaX<0 || that.loopIndex== -3){
+              element.style.webkitTransform = 'translateX('+(that.loopIndex*iWidth+ev.deltaX/4)+'px)';return;
+            } 
+            element.style.webkitTransform = 'translateX('+(that.loopIndex*iWidth+ev.deltaX)+'px)';
+          }else{
+            ev.target.style.transform = 'translate3d('+(that.curX+ev.deltaX)+'px,'+(that.curY+ev.deltaY)+'px,0) scale3d('+that.currentScale+','+that.currentScale+','+that.currentScale+')';
+          }        
+          
+      });
+
+      mc.on("panend", function(e) {
+        if(that.scaleActive == false){
+
+            element.style.webkitTransition = 'transform 300ms ease';
+            if(e.deltaTime<=300 || Math.abs(e.distance)>=iWidth/3){//swipe
+              console.log(e.deltaTime)
+              
+              if(e.deltaX<0){//left
+                console.log('direction2')
+                that.loopIndex -= 1;
+                if(that.loopIndex <= -3){
+                  that.loopIndex = -3;
+                };
+               transformFun(that.loopIndex);
+                
+              }else if(e.deltaX>0){
+                console.log(that.loopIndex)
+                that.loopIndex += 1;
+                if(that.loopIndex >= 0){
+                  that.loopIndex = 0;
+                }
+                transformFun(that.loopIndex);
+                
+              }
+              console.log(that.loopIndex)
+            }else{//pan
+              transformFun(that.loopIndex);
+            }
+
+        }else{
+
+            that.curX += e.deltaX;
+            that.curY += e.deltaY
+          
+            lr = ((iWidth * that.currentScale)-iWidth)/2;//左边和右边限制距离
+            tb= (e.target.offsetHeight*that.currentScale-window.innerHeight)/2;//上和下限制距离
+
+           if(that.curX>lr){
+              e.target.style.transition ='transform 300ms ease';
+              e.target.style.transform = 'translate3d('+lr+'px,'+that.curY+'px,0) scale3d('+that.currentScale+','+that.currentScale+','+that.currentScale+')';
+              that.curX =lr
+              setTimeout(function(){e.target.style.transition=''},300)
+            }if(that.curX<-lr){
+              e.target.style.transition ='transform 300ms ease';
+              e.target.style.transform = 'translate3d('+(-lr)+'px,'+that.curY+'px,0) scale3d('+that.currentScale+','+that.currentScale+','+that.currentScale+')';
+              that.curX = -lr
+              setTimeout(function(){e.target.style.transition=''},300)
+            }if(that.curY>tb && that.currentScale>window.innerHeight / iWidth){
+              e.target.style.transition ='transform 300ms ease';
+              e.target.style.transform = 'translate3d('+that.curX+'px,'+tb+'px,0) scale3d('+that.currentScale+','+that.currentScale+','+that.currentScale+')';
+              that.curY =tb
+              setTimeout(function(){e.target.style.transition=''},300)
+            }if(that.curY<-tb && that.currentScale>window.innerHeight / iWidth){
+              e.target.style.transition ='transform 300ms ease';
+              e.target.style.transform = 'translate3d('+that.curX+'px,'+(-tb)+'px,0) scale3d('+that.currentScale+','+that.currentScale+','+that.currentScale+')';
+              that.curY = -tb
+              setTimeout(function(){e.target.style.transition=''},300)
+            }
+            if((that.curY>tb || that.curY<-tb) && that.currentScale<window.innerHeight / iWidth){
+              e.target.style.transition ='transform 300ms ease';
+              e.target.style.transform = 'translate3d(0,0,0) scale3d('+that.currentScale+','+that.currentScale+','+that.currentScale+')';
+              that.curX=0;
+              that.curY=0;
+              setTimeout(function(){e.target.style.transition=''},300)
+            }
+        }                       
+      });
+    mc.on('pinchstart',function(e){
+        that.scaleActive = true;
+      })
+    mc.on("pinchin", function (e) {
+          if(that.temp<1){
+            that.currentScale = 1;
+            e.target.style.webkitTransform = 'translate3d('+(that.curX+e.deltaX)+'px,'+(that.curY+e.deltaY)+'px,0) scale3d(1,1,1)';
+            return;
+          }
+          that.temp = that.currentScale-(1-e.scale);
+          e.target.style.webkitTransform = 'translate3d('+(that.curX+e.deltaX)+'px,'+(that.curY+e.deltaY)+'px,0) scale3d('+that.temp+','+that.temp+','+that.temp+')';
+         });
+    mc.on("pinchout", function (e) {
+          if(that.temp>3){
+            that.currentScale = 3;
+            return;
+          }
+          that.temp = that.currentScale+(e.scale-1);
+          e.target.style.webkitTransform = 'translate3d('+(that.curX+e.deltaX)+'px,'+(that.curY+e.deltaY)+'px,0) scale3d('+that.temp+','+that.temp+','+that.temp+')';
+         });
+    mc.on("pinchend", function (e) {
+        if(that.temp<1){
+          that.currentScale = 1;
+          e.target.style.webkitTransform = 'translate3d('+(that.curX+e.deltaX)+'px,'+(that.curY+e.deltaY)+'px,0) scale3d(1,1,1)';
+          return;
+        }
+          that.currentScale = that.temp;
+       });
+     mc.on("doubletap", function (e) {
+
+        if(that.scaleActive == false){
+          that.scaleActive = true;
+          that.currentScale = that.temp = 3;
+          e.target.style.transform = 'translate3d('+(that.curX+e.deltaX)+'px,'+(that.curY+e.deltaY)+'px,0) scale3d('+that.temp+','+that.temp+','+that.temp+')';
+        }else{
+          that.scaleActive = false;
+          that.curX= 0;
+          that.curY= 0;
+          that.currentScale = that.temp = 1;
+          e.target.style.transform = 'translate3d(0,0,0) scale3d(1,1,1)';
+        }
+       });
+}
+    function loopimg (ele){
+      var that = this;
+      that.loopIndex = 0;
+      var myElement = ele;
+      var transformFun  = function(_index,noPoint){
+         myElement.style.webkitTransform  = 'translateX('+ (_index*iWidth)+'px)';
+         if(noPoint)return;
+         point.children().eq(_index*-1).addClass('active').siblings().removeClass('active');
+      }
+
+
+      var mc = new Hammer(myElement);
+      mc.on("pan", function(ev) {
+          myElement.style.webkitTransition = '';          
+          if(that.loopIndex==0&&ev.deltaX<0 || that.loopIndex== -3){
+            myElement.style.webkitTransform = 'translateX('+(that.loopIndex*iWidth+ev.deltaX/4)+'px)';return;
+          } 
+          myElement.style.webkitTransform = 'translateX('+(that.loopIndex*iWidth+ev.deltaX)+'px)';
+      });
+
+      mc.on("panend", function(ev) {
+          myElement.style.webkitTransition = 'transform 300ms ease';
+          if(ev.deltaTime<=300 || Math.abs(ev.distance)>=iWidth/3){//swipe
+            console.log(ev.deltaTime)
+            
+            if(ev.deltaX<0){//left
+              console.log('direction2')
+              that.loopIndex -= 1;
+              if(that.loopIndex <= -3){
+                that.loopIndex = -3;
+              };
+             transformFun(that.loopIndex);
+              
+            }else if(ev.deltaX>0){
+              console.log(that.loopIndex)
+              that.loopIndex += 1;
+              if(that.loopIndex >= 0){
+                that.loopIndex = 0;
+              }
+              transformFun(that.loopIndex);
+              
+            }
+            console.log(that.loopIndex)
+          }else{//pan
+            transformFun(that.loopIndex);
+          }
+                   
+      });
+
+    }
+
+    function disableAll(){
+        $.each(btn,function(index,item){
+          var me = $(this);
+          if(!me.hasClass('selected')){
+            me.addClass('disabled');
+          }
+        })
+    }
+
+     function ableAll(){
+      $.each(btn,function(index,item){
+        var me = $(this);
+        if(!me.hasClass('selected')){
+          me.removeClass('disabled');
+        }
+      })
+    }
+
+    function changeTab(target){
+
+      var index = target.index();
+      console.log(index)
+      mainWrapper.css({
+        transform:'translateX('+index* -iWidth + 'px)',
+      });
+      document.body.scrollTop = 0;
+      mainWrapper.children().eq(index).css('height','auto').siblings().css('height',(window.innerHeight - $('#header').height()));
+      target.addClass('active').siblings().removeClass('active');
+      /*css('height','auto').siblings().css({
+        height:'684px',
+      })*/
+    };
+
+    (function init(){
+      var recommend = MZ['modelData']['recommend'];
+      var target = MZ['modelData']['cspuMap'][recommend];
+      var images = target['images'];
+
+
+      //加载焦点图
+      function loadimg(imgdata,_title,_price){
+        ul.html('');
+        point.html('');
+        ul.css({
+          'width':imgdata.length * iWidth +'px',
+        });
+        $.each(imgdata,function(index,item){
+          ul.append('<li class="item" style="width:'+iWidth+'px"><img src="'+item+'@480x480.jpg"></li>');
+          if(index==0){
+            point.append('<span class="active" data-index="'+index+'"></span>')
+            summary_pic.src = item +'@240x240.jpg';
+          }else{
+            point.append('<span data-index="'+index+'"></span>')
+          }      
+        })
+        console.log(_price)
+        title.html(_title);
+        price.html(_price.toString().slice(0,-2)+'.'+_price.toString().slice(-2));       
+      }
+      
+      loadimg(images,target['attributes'],target['priceCent'])
+      //商品弹出层
+     /* $.each(recommend.split(';'),function(index,item){
+        $('a[data-value="'+item+'"]').addClass('selected')
+      })*/
+
+      btn.on('click',function(e){
+        var $this= $(this);
+        var totalName = '';
+        var temp = {};
+        var match = [];
+        
+        if($this.hasClass('disabled'))return;
+        if($this.hasClass('selected')){
+          $this.removeClass('selected')
+        }else{
+          $this.addClass('selected').siblings().removeClass('selected')
+        }
+        
+        var indexOfSib = $(e.target).parent().parent().index();
+        var _siblings = $(e.target).siblings();
+        var _selectedByOrder = {};
+        var dlLength = $('.property-sale').length;
+        for(var p=0; p<dlLength; p++){
+          var d = $('.selected',$('.property-sale').eq(p));
+          if(d.length){
+            _selectedByOrder[p] = d.attr('data-value')+';?';
+          }else{
+            _selectedByOrder[p] = '[0-9:]+;?';
+          }
+        }console.log(_selectedByOrder)
+
+        var _selected = $('a.selected',options_item);
+        
+        if(!_selected.length){
+          ableAll();
+          return;
+        }else{
+          disableAll();
+        }
+
+        $.each(_selected,function(index,item){
+          var value = _selected.attr('data-value');
+
+          for(var prop in search){
+            if(prop.includes(value)){
+              match = match.concat(prop.split(';'));//所有匹配的字段(["14:18238", "3:16", "13:37", "14:18238", "3:16", "13:36"])
+            }
+          }
+        })
+
+        $.each(_siblings,function(index,item){
+          var value = $(item).attr('data-value');
+          var str = '';
+          var isTrue = false;
+          for(var prop in _selectedByOrder){
+            if(prop == indexOfSib){
+              console.log(value)
+              str += value+';?';
+            }else{
+              str += _selectedByOrder[prop];
+            }          
+          }
+          str = '/'+str+'/';
+          console.log(str)
+          for(var prop in search){
+            if(eval(str).test(prop)){             
+              isTrue = true;
+              match = match.concat(value);//检测同级兄弟元素
+              return;           
+            }
+          }
+        })
+
+        $.each(match,function(index,item){
+          if(!temp[item]){
+            temp[item] = 1;
+          }else{temp[item]++}
+        })
+        match = [];
+
+        for(var item in temp){
+          match.push(item);
+        }
+
+        $.each(match,function(index,item){
+          $('a[data-value="'+item+'"]',options_wrap).removeClass('disabled');
+        })
+
+        //如果选中组合而且存在，则加载图片换价格
+        if(_selected.length == 3){
+          console.log(_selected)
+          $.each(_selected,function(index,item){
+            totalName += $(item).attr('data-value') + ';';
+          })
+          totalName = totalName.slice(0,-1);
+
+          var target = search[totalName];
+          if(target){
+            loadimg(target['images'],target['attributes'],target['priceCent'])
+          }
+        }
+      })
+      ul.on('click',function(e){
+        var imgFullView =  $('#imgFullView');
+        imgFullView.html('');
+        imgFullView.append(ul.prop('outerHTML'))
+        $.each($('li',imgFullView),function(index,item){
+          item.style.top = (window.innerHeight - iWidth) /2 +'px';
+        })
+        $.each($('img',imgFullView),function(index,item){
+          item.src = item.src.split('@')[0];
+        })
+
+        new imgFullViewFun($('ul',imgFullView)[0]);
+
+        imgFullView.css({
+          display:'block',
+        })
+      })
+
+      var canLoad = false;
+      var _active = false;
+      var scrolling = false;
+      window.addEventListener('scroll', function(e){
+        document.querySelector('.vm-title').innerText = 'scrollTop: '+document.body.scrollTop +'  iH'+window.innerHeight
+        if( Math.abs(document.body.scrollTop - (document.body.offsetHeight - window.innerHeight)) <=2){
+          canLoad = true;
+        }else{
+          canLoad = false;
+        }
+        console.log('canLoad:'+canLoad +'|||   _active:'+_active);
+      },false)
+      var load_more = new Hammer(document.querySelector('#goods'));
+      load_more.on('panend',function(e){
+        var dir = e.offsetDirection;
+        console.log(dir)
+        if(dir==8 && canLoad && !_active){
+          document.querySelector('#goods').style.webkitTransform = 'translateY('+ ($('#goods').height() - $('#header').height()) * -1 +'px)';
+          document.querySelector('.info-more').innerHTML = document.querySelector('#description').innerHTML;
+          _active = true; 
+        }else if(dir==16 && !canLoad && _active){
+          document.querySelector('#goods').style.webkitTransform = 'translateY(0)';
+          setTimeout(function(){
+            document.querySelector('.info-more').innerHTML = '';
+          },1000);        
+          _active = false;
+        }
+      })
+
+      $('#imgFullView').on('click',function(e){
+        if(e.target.nodeName.toLowerCase() == 'ul'){
+          $('#imgFullView').css('display','none')
+        }      
+      })
+
+      $('.prod-selected').on('click',function(e){
+        $('#J_layerProps').animate({
+          visibility: 'visible',
+          transform:'translateY(0)',
+        },300,'ease');
+        $('html').css({
+          height:window.innerHeight,
+          overflow:'hidden'
+        })
+      })
+
+      $('.vm-close').on('click',function(e){
+        $('#J_layerProps').animate({
+          visibility: 'hidden',
+          transform:'translateY(110%)',
+        });
+        $('html').css({
+          height:'auto',
+          overflow:''
+        })
+      })
+
+      $('.header-nav a').on('click',function(e){
+        var target = $(e.target);
+        changeTab(target);
+
+      })
+       changeTab($('.header-nav a').eq(0));
+      new loopimg(ul[0]);
+    })();
+  </script>
+</html>

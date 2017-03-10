@@ -1,0 +1,38 @@
+/* line 1, ../sass/reset.scss */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/* line 6, ../sass/reset.scss */
+a {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  text-decoration: none; }
+
+/* line 11, ../sass/reset.scss */
+ul li ol dl {
+  list-style: none; }
+
+@font-face {
+  font-family: 'Source Han Sans';
+  src: url(http://m2.res.meizu.com/static/cn/global/fonts/KaiGenGothicCN-Light_eb1cdb3.eot);
+  src: url(http://m2.res.meizu.com/static/cn/global/fonts/KaiGenGothicCN-Light_eb1cdb3.eot?) format("embedded-opentype"), url(http://m2.res.meizu.com/static/cn/global/fonts/KaiGenGothicCN-Light_ab0c397.woff) format("woff"), url(http://m2.res.meizu.com/static/cn/global/fonts/KaiGenGothicCN-Light_2a17fba.ttf) format("truetype"), url(http://m2.res.meizu.com/static/cn/global/fonts/KaiGenGothicCN-Light_5cd196c.svg) format("svg");
+  font-weight: 400;
+  font-style: normal; }
+/* line 15, ../sass/reset.scss */
+.clearfix {
+  display: block; }
+
+/* line 18, ../sass/reset.scss */
+.clearfix {
+  display: inline-table; }
+
+/* line 21, ../sass/reset.scss */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
